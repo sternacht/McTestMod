@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CC",
+    "CC"
+  ],
+  "key": {
+    "C": { "item": "firstmod:chocolate" }
+  },
+  "result": {
+    "item": "firstmod:chocolate_block",
+    "count": 1
+  }
+}

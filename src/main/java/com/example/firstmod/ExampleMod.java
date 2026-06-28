@@ -1,5 +1,6 @@
 package com.example.firstmod;
 
+import com.example.firstmod.Block.ModBlocks;
 import com.example.firstmod.Item.ModItem;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -39,6 +40,7 @@ public class ExampleMod
         modEventBus.addListener(this::addCreative);
 
         ModItem.register(modEventBus);
+        ModBlocks.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -51,6 +53,8 @@ public class ExampleMod
     {
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS)
             event.accept(ModItem.CHOCOLATE);
+        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
+            event.accept(ModBlocks.CHOCOLATE_BLOCK_ITEM);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
